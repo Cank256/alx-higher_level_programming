@@ -1,0 +1,5 @@
+#!/bin/bash
+python3 -m py_compile "$PYFILE"
+output_filename="${PYFILE}c"
+mv "__pycache__/$(basename ${PYFILE%.py}).cpython-$(python3 -c 'import sys; print(sys.version_info.major * 10 + sys.version_info.minor)')${PYFILE: -3}c" "$output_filename"
+echo "Compiled $PYFILE to $output_filename"
