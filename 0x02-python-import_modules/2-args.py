@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 
-def main():
+def number_of_args():
     argv = sys.argv[1:]  # Excluding the script name itself
     num_args = len(argv)
 
@@ -16,5 +16,4 @@ def main():
     for index, arg in enumerate(argv, start=1):
         print(f"{index}: {arg}")
 
-if __name__ == "__main__":
-    main()
+number_of_args()
