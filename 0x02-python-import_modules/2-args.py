@@ -8,7 +8,10 @@ def main():
     if num_args == 1:
         print(f"{num_args} argument:")
     else:
-        print(f"{num_args} arguments." if num_args == 0 else f"{num_args} arguments")
+        if num_args == 0:
+            print(f"{num_args} arguments.")
+        else: 
+            print(f"{num_args} arguments")
 
     for index, arg in enumerate(argv, start=1):
         print(f"{index}: {arg}")
