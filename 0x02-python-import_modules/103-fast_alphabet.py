@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 alphabet_uppercase = map(chr, range(65, 91))
-print(''.join(alphabet_uppercase))
+print(*alphabet_uppercase, sep='', end='\n')
