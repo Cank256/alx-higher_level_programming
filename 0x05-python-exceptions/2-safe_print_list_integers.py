@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-safe_print_division = __import__('3-safe_print_division').safe_print_division
-
-a = 12
-b = 2
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
-
-a = 12
-b = 0
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
+def safe_print_list_integers(my_list=[], x=0):
+    try:
+        count = 0
+        for element in my_list:
+            if isinstance(element, int):
+                print("{:d}".format(element), end='')
+                count += 1
+                if count >= x:
+                    break
+        print()
+        return count
+    except Exception as e:
+        return count

@@ -10,7 +10,6 @@ def safe_print_division(a, b):
             print("Inside result: {}".format(result))
         except NameError:
             print("Inside result: None")
-    
     if result is not None:
         return result
     else:
