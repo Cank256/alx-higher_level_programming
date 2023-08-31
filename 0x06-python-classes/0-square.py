@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# An Empty Python class
+"""
+An empty python class to represent a square
+"""
 class Square:
     """
     This class represents a square.
