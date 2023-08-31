@@ -10,7 +10,6 @@ class Square:
 
     Attributes:
         __size (int): The size of each side of the square.
-        dict_ (dict): A dictionary to store additional information.
     """
     def __init__(self, size=0):
         """
@@ -19,7 +18,6 @@ class Square:
         Args:
             size (int, optional): The size of each side of the square.
                                     Defaults to 0.
-            dict_ (dict, optional): Additional dictionary. Defaults to an empty dictionary.
         Raises:
             TypeError: If the provided size is not an integer.
             ValueError: If the provided size is less than zero.
@@ -29,5 +27,3 @@ class Square:
         if size < 0:
             raise ValueError('Size must be >= 0')
         self.__size = size
-        self.dict_ = {}
-
