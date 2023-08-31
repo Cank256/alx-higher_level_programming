@@ -1,6 +1,19 @@
-#!/usr/bin/python3
 class Square:
     """
-    A class representing a square.
+    This class represents a square.
+
+    Attributes:
+        side_length (float): The length of each side of the square.
+
+    Methods:
+        None
     """
-    pass
+
+    def __init__(self, side_length):
+        """
+        Initializes a Square instance.
+
+        Args:
+            side_length (float): The length of each side of the square.
+        """
+        self.side_length = side_length
