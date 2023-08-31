@@ -11,7 +11,6 @@ class Square:
     Attributes:
         __size (float): The size of each side of the square.
     """
-    
     def __init__(self, size):
         """
         Initializes a new Square instance.

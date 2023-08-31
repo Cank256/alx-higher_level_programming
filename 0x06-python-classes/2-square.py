@@ -11,14 +11,13 @@ class Square:
     Attributes:
         __size (int): The size of each side of the square.
     """
-    
     def __init__(self, size=0):
         """
         Initializes a new Square instance.
 
         Args:
-            size (int, optional): The size of each side of the square. Defaults to 0.
-        
+            size (int, optional): The size of each side of the square.
+                                    Defaults to 0.
         Raises:
             TypeError: If the provided size is not an integer.
             ValueError: If the provided size is less than zero.
