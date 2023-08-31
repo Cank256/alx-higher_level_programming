@@ -2,6 +2,8 @@
 """
 A python class to represent a square
 """
+
+
 class Square:
     """
     A class representing a square.
