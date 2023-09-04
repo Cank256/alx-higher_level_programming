@@ -9,16 +9,22 @@ class Rectangle():
     This class represents a rectangle.
 
     Attributes:
-        __width (float): The size of each side of the rectangle.
-        __height (float): The height of each side of the rectangle.
+        __width (int): The size of each side of the rectangle.
+        __height (int): The height of each side of the rectangle.
     """
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """
         Initializes a new Square instance.
 
         Args:
-            width (float): The width of each side of the rectangle.
-            height (float): The height of each side of the rectangle.
+            width (int): The width of each side of the rectangle.
+            height (int): The height of each side of the rectangle.
         """
-        self.__width = width
-        self.__height = height
+        if not isinstance(width, int):
+            raise TypeError('width must be an integer')
+        if width < 0:
+            raise ValueError('width must be >= 0')
+        if not isinstance(height, int):
+            raise TypeError('height must be an integer')
+        if height < 0:
+            raise ValueError('height must be >= 0')
