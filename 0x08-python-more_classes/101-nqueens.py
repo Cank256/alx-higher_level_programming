@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 import sys
+"""
+A rectangle Module
+
+"""
 
 
 def is_safe(board, row, col, N):
