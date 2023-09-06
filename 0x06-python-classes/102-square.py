@@ -17,7 +17,7 @@ class Square:
 
         Args:
             size (float or int, optional): The size of each side of the square.
-                                          Defaults to 0.
+                                        Defaults to 0.
         Raises:
             TypeError: If the provided size is not a number (float or integer).
             ValueError: If the provided size is less than 0.
