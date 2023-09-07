@@ -1,0 +1,45 @@
+# Test cases for the text_indentation function
+
+# Test valid input with '.' and '?' characters
+text_indentation("This is a sentence. Is it? Yes: it is.")
+# Expected Output:
+# This is a sentence
+# 
+# Is it
+# 
+# Yes
+# 
+# it is
+
+# Test valid input with only '.' characters
+text_indentation("Sentence 1. Sentence 2. Sentence 3.")
+# Expected Output:
+# Sentence 1
+# 
+# Sentence 2
+# 
+# Sentence 3
+
+# Test valid input with only '?' characters
+text_indentation("Question 1? Question 2? Question 3?")
+# Expected Output:
+# Question 1
+# 
+# Question 2
+# 
+# Question 3
+
+# Test valid input with only ':' characters
+text_indentation("Statement 1: Statement 2: Statement 3:")
+# Expected Output:
+# Statement 1
+# 
+# Statement 2
+# 
+# Statement 3
+
+# Test invalid input: text is not a string
+try:
+    text_indentation(123)
+except TypeError as e:
+    assert str(e) == "text must be a string"
