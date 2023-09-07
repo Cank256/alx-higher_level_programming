@@ -1,0 +1,40 @@
+# Test cases for the print_square function
+
+# Test valid input with a size of 3
+print_square(3)
+# Expected Output:
+# ###
+# ###
+# ###
+
+# Test valid input with a size of 5
+print_square(5)
+# Expected Output:
+# #####
+# #####
+# #####
+# #####
+# #####
+
+# Test valid input with a size of 1
+print_square(1)
+# Expected Output:
+# #
+
+# Test invalid input: size is a float less than 0
+try:
+    print_square(-2.5)
+except TypeError as e:
+    assert str(e) == "size must be an integer"
+
+# Test invalid input: size is a negative integer
+try:
+    print_square(-4)
+except ValueError as e:
+    assert str(e) == "size must be >= 0"
+
+# Test invalid input: size is a non-integer
+try:
+    print_square("2")
+except TypeError as e:
+    assert str(e) == "size must be an integer"

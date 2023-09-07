@@ -1,0 +1,15 @@
+# Test cases for say_my_name function
+
+# Test valid inputs
+say_my_name('John', 'Doe')  # Expected: "My name is John Doe"
+say_my_name('Alice')  # Expected: "My name is Alice "
+
+# Test invalid inputs
+try:
+    say_my_name(123, 'Smith')
+except TypeError as e:
+    assert str(e) == 'first_name must be a string and last_name must be a string'
+try:
+    say_my_name('Bob', 456)
+except TypeError as e:
+    assert str(e) == 'first_name must be a string and last_name must be a string'
