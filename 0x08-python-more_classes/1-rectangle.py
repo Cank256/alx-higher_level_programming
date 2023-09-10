@@ -14,7 +14,7 @@ class Rectangle:
         Args:
             width (int, optional): The width of the rectangle (default is 0).
             height (int, optional): The height of the rectangle (default is 0).
-        
+
         Raises:
             TypeError: If the value of height or width is not an integer.
             ValueError: If the value of height or width is less than 0.
