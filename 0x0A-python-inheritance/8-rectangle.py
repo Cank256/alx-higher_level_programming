@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+A class Rectangle that inherits from BaseGeometry
+(7-base_geometry.py).
+"""
+
+
 class BaseGeometry:
     """
     BaseGeometry is a base class for geometric objects.
