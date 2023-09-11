@@ -10,8 +10,6 @@ def lookup(obj):
     Filter out attributes and methods that
     start with '__' (usually special methods)
     """
-    filtered_attributes_and_methods = [
-        item for item in attributes_and_methods if not item.startswith('__')
-    ]
+    filtered_attributes_and_methods = [item for item in attributes_and_methods if not item.startswith('__')]
 
-    return filtered_attributes_and_methods
+    return sorted(filtered_attributes_and_methods)
