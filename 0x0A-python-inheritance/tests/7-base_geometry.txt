@@ -1,0 +1,20 @@
+# Test cases for BaseGeometry class
+
+# Test Case 1: Create a BaseGeometry instance and call area method (not implemented)
+Create a BaseGeometry instance and call the area method.
+Expected Output:
+Exception: area() is not implemented
+
+# Test Case 2: Create a BaseGeometry instance and validate an integer value
+Create a BaseGeometry instance and validate an integer value using integer_validator.
+Expected Output: (No exceptions raised)
+
+# Test Case 3: Create a BaseGeometry instance and validate a non-integer value
+Create a BaseGeometry instance and validate a non-integer value using integer_validator.
+Expected Output:
+TypeError: width must be an integer
+
+# Test Case 4: Create a BaseGeometry instance and validate a negative value
+Create a BaseGeometry instance and validate a negative value using integer_validator.
+Expected Output:
+ValueError: height must be greater than 0
