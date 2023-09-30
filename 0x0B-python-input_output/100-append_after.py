@@ -26,8 +26,17 @@ def append_after(filename="", search_string="", new_string=""):
         for line in lines:
             file.write(line)  # Write the original line
             if search_string in line:
-                file.write(new_string + '\n')
+                file.write(new_string)  # Write the new line without '\n' here
 
     # Truncate the file to remove any extra lines
     with open(filename, "r+") as file:
         file.truncate()
+
+
+# Example usage
+if __name__ == "__main__":
+    textsearch = "c"
+    textappend = "Python is cool!\n"
+    file = "c is fun!"
+
+    append_after(file, textsearch, textappend)
