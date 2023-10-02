@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base module."""
 
+
 class Base:
     """Base class for managing id attribute."""
 
@@ -10,7 +11,8 @@ class Base:
         """Initialize the Base class.
 
         Args:
-            id (int): The id for the Base instance. If not provided, it will be auto-generated.
+            id (int): The id for the Base instance.
+            If not provided, it will be auto-generated.
         """
         if id is not None:
             self.id = id
