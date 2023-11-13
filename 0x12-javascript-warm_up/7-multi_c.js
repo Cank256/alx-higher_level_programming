@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const x = process.argv[1];
+const x = process.argv[2];
 
 if (x === undefined) {
   console.log('Missing number of occurences');
