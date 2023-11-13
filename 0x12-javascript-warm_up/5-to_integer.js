@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const getNum = process.argv[1];
+const getNum = process.argv[2];
 const myNum = parseInt(getNum);
 
 if (!isNaN(myNum)) {
