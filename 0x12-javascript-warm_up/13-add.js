@@ -1,5 +1,7 @@
 #!/usr/bin/node
 
-const foo = function(a, b) {
+const add = function(a, b) {
   console.log(parseInt(a) + parseInt(b));
 }
+
+module.exports = add;
