@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-const add = function(a, b) {
-  console.log(parseInt(a) + parseInt(b));
-}
+const add = (num1, num2) => num1 + num2;
 
 module.exports = add;
