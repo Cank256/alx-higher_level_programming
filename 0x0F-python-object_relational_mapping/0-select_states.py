@@ -8,7 +8,7 @@ def list_states(username, password, database):
     """List all states from the database hbtn_0e_0_usa"""
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost",
+        host="127.0.0.1",
         port=3306,
         user=username,
         passwd=password,
