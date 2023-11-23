@@ -4,11 +4,9 @@ of State and an instance Base"""
 
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 # Create an instance of declarative_base
 Base = declarative_base()
-
 
 class State(Base):
     """Class definition of State"""
@@ -25,14 +23,11 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
 
-# Create an engine to connect to the MySQL server
-# running on localhost at port 3306
-# Replace 'your_username', 'your_password',
-# 'your_database' with actual values
-engine = create_engine(
-    'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa'
-)
+if __name__ == "__main__":
+    # Create an engine to connect to the MySQL server
+    # running on localhost at port 3306
+    engine = create_engine('mysql+mysqldb://your_username:your_password@127.0.0.1:3306/your_database')
 
-# WARNING: All classes who inherit from Base must be
-# imported before calling Base.metadata.create_all(engine)
-Base.metadata.create_all(engine)
+    # WARNING: All classes who inherit from Base must be
+    # imported before calling Base.metadata.create_all(engine)
+    Base.metadata.create_all(engine)
