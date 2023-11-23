@@ -9,7 +9,7 @@ def list_cities(username, password, database):
     """List all cities from the database hbtn_0e_4_usa"""
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="127.0.0.1",
+        host="localhost",
         port=3306,
         user=username,
         passwd=password,
