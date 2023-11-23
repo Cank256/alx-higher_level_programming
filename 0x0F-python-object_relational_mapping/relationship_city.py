@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Module that contains the class definition
-of City and an instance Base"""
+"""
+Module that contains the class definition
+of City and an instance Base
+"""
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
@@ -8,7 +10,9 @@ from relationship_state import Base
 
 
 class City(Base):
-    """Class definition of City"""
+    """
+    Class definition of City
+    """
 
     # Link to the MySQL table 'cities'
     __tablename__ = 'cities'

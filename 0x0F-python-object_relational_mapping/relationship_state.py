@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""Module that contains the class definition
-of State and an instance Base"""
+"""
+Module that contains the class definition
+of State and an instance Base
+"""
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -11,7 +13,9 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Class definition of State"""
+    """
+    Class definition of State
+    """
 
     # Link to the MySQL table 'states'
     __tablename__ = 'states'
@@ -24,8 +28,7 @@ class State(Base):
     # of a string with a maximum of 128 characters and can’t be null
     name = Column(String(128), nullable=False)
 
-    # Class attribute cities that represents a relationship
-    # with the class City. If the State object is deleted,
-    # all linked City objects must be automatically deleted
+    # Relationship to the City class
     cities = relationship(
-        "City", back_populates="state", cascade="all, delete-orphan")
+        "City", back_populates="state", cascade="all, delete-orphan"
+    )
