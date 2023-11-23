@@ -50,8 +50,10 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Extract command-line arguments
-    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
-    state_name =  sys.argv[4]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    state_name = sys.argv[4]
 
     # Call the function to search states by name
     search_states_by_name(username, password, database, state_name)
