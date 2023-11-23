@@ -14,7 +14,7 @@ def list_states_cities(username, password, database):
     contained in the database hbtn_0e_101_usa"""
     # Create an engine to connect to the MySQL server
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@127.0.0.1:3306/{}'
+        'mysql+mysqldb://{}:{}@localhost:3306/{}'
         .format(username, password, database)
     )
 
