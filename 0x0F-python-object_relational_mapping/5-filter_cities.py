@@ -11,7 +11,7 @@ def list_cities_by_state(username, password, database, state_name):
     the database hbtn_0e_4_usa"""
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost",
+        host="127.0.0.1",
         port=3306,
         user=username,
         passwd=password,
@@ -21,7 +21,10 @@ def list_cities_by_state(username, password, database, state_name):
     cursor = db.cursor()
 
     # Use a parameterized query to avoid SQL injection
-    query = "SELECT * FROM cities WHERE state_name = %s ORDER BY id ASC"
+    query = "\
+        SELECT cities.name FROM cities JOIN states ON \
+        cities.state_id = states.id WHERE states.name = %s \
+        ORDER BY cities.id ASC"
 
     # Execute the SQL query with the parameterized argument
     cursor.execute(query, (state_name,))
@@ -29,9 +32,14 @@ def list_cities_by_state(username, password, database, state_name):
     # Fetch all the rows
     rows = cursor.fetchall()
 
-    # Print the results
+    # String to hold the result
+    result_set = set()
+
     for row in rows:
-        print(row)
+        result_set.add(row[0])
+
+    result_string = ', '.join(result_set)
+    print(result_string)
 
     # Close the cursor and the connection
     cursor.close()
@@ -39,7 +47,7 @@ def list_cities_by_state(username, password, database, state_name):
 
 
 if __name__ == "__main__":
-    # Check if all three command-line arguments are provided
+    # Check if all four command-line arguments are provided
     if len(sys.argv) != 5:
         print("Arguments missing")
         sys.exit(1)
