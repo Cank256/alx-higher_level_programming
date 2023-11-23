@@ -9,7 +9,7 @@ def list_cities(username, password, database):
     """List all cities from the database hbtn_0e_4_usa"""
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="localhost",
+        host="127.0.0.1",
         port=3306,
         user=username,
         passwd=password,
@@ -18,8 +18,12 @@ def list_cities(username, password, database):
     # Create a cursor object to execute SQL queries
     cursor = db.cursor()
 
-    # Execute the SQL query to retrieve all cities, sorted by id
-    cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+    # Execute the SQL query to retrieve all cities with state names,
+    # sorted by id
+    cursor.execute("\
+        SELECT cities.id, cities.name, states.name FROM \
+        cities JOIN states ON cities.state_id = states.id ORDER BY \
+        cities.id ASC")
 
     # Fetch all the rows
     rows = cursor.fetchall()
