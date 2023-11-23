@@ -8,6 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Create an instance of declarative_base
 Base = declarative_base()
 
+
 class State(Base):
     """Class definition of State"""
 
@@ -26,7 +27,8 @@ class State(Base):
 if __name__ == "__main__":
     # Create an engine to connect to the MySQL server
     # running on localhost at port 3306
-    engine = create_engine('mysql+mysqldb://your_username:your_password@127.0.0.1:3306/your_database')
+    engine = create_engine('\
+    mysql+mysqldb://your_username:your_password@localhost:3306/your_database')
 
     # WARNING: All classes who inherit from Base must be
     # imported before calling Base.metadata.create_all(engine)
