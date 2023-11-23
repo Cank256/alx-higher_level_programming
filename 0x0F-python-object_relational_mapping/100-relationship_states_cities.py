@@ -17,7 +17,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Connect to a MySQL server running on localhost at port 3306
-    engine = create_engine('mysql+mysqldb://{}:{}@127.0.0.1:3306/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
 
     # Bind the engine to the metadata of the Base class
