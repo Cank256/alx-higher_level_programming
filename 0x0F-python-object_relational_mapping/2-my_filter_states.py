@@ -15,7 +15,7 @@ def search_states_by_name(username, password, database, state_name):
     """
     # Connect to MySQL server
     db = MySQLdb.connect(
-        host="127.0.0.1",
+        host="localhost",
         port=3306,
         user=username,
         passwd=password,
@@ -25,8 +25,9 @@ def search_states_by_name(username, password, database, state_name):
     cursor = db.cursor()
 
     # Use format to create the SQL query with the user input
-    query_text = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-    query = query_text.format(state_name)
+    query = "\
+    SELECT * FROM states WHERE name = '{}' ORDER BY id ASC\
+    ".format(state_name)
 
     # Execute the SQL query
     cursor.execute(query)

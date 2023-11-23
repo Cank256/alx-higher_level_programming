@@ -40,13 +40,15 @@ def search_states_by_name(username, password, database, state_name):
 
 if __name__ == "__main__":
     # Check if all three command-line arguments are provided
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print("Arguments missing")
         sys.exit(1)
 
     # Extract command-line arguments
-    username, password, database, state_name = sys.argv[1],
-    sys.argv[2], sys.argv[3], sys.argv[4]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    state_name = sys.argv[4]
 
     # Call the function to search states by name
     search_states_by_name(username, password, database, state_name)
