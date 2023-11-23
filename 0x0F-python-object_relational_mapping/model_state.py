@@ -30,7 +30,7 @@ class State(Base):
 # Replace 'your_username', 'your_password',
 # 'your_database' with actual values
 engine = create_engine(
-    'mysql+mysqldb://your_username:your_password@localhost:3306/your_database'
+    'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa'
 )
 
 # WARNING: All classes who inherit from Base must be
