@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script sends a JSON POST request to the provided URL with the contents of a file in the request body.
 
 # Usage: ./json_post_request.sh <URL> <filename>

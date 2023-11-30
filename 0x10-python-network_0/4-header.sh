@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script sends a GET request to the provided URL with a specific header and displays the body of the response.
 
 # Usage: ./get_request_with_header.sh <URL>

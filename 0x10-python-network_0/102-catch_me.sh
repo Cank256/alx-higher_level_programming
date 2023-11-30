@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script makes a request to 0.0.0.0:5000/catch_me to get the server response.
 
 # Usage: ./catch_me.sh

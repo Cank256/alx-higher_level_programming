@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script sends a POST request to the provided URL with specific variables in the request body and displays the body of the response.
 
 # Usage: ./post_request.sh <URL>

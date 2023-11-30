@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script sends a request to the provided URL and displays only the status code of the response.
 
 # Usage: ./get_status_code.sh <URL>

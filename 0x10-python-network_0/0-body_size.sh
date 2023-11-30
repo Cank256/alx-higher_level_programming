@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This script sends a request to the provided URL, retrieves the body size, and displays it in bytes.
 
 # Usage: ./get_response_size.sh <URL>
