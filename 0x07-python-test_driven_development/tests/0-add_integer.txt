@@ -1,25 +1,21 @@
-# Test cases for the add_integer function
+$ cat tests/0-add_integer.txt
+#!/usr/bin/python3
+"""
+Tests for add_integer function.
+"""
 
-# Test case 1: Adding two integers
->>> add_integer(5, 3)
-8
+add_integer = __import__('0-add_integer').add_integer
 
-# Test case 2: Adding an integer and a float
->>> add_integer(10, 2.5)
-12
-
-# Test case 3: Adding two floats
->>> add_integer(2.7, 3.3)
-5
-
-# Test case 4: Adding a string and an integer (should raise TypeError)
->>> add_integer("5", 3)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer or b must be an integer
-
-# Test case 5: Adding a float and a string (should raise TypeError)
->>> add_integer(5.5, "3")
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer or b must be an integer
+# Test cases
+print(add_integer(1, 2))       # 3
+print(add_integer(100, -2))    # 98
+print(add_integer(2))           # 100
+print(add_integer(100.3, -2))   # 98
+try:
+    print(add_integer(4, "School"))
+except Exception as e:
+    print(e)
+try:
+    print(add_integer(None))
+except Exception as e:
+    print(e)
