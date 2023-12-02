@@ -1,31 +1,25 @@
-#!/usr/bin/python3
-"""
-Tests for the add_integer function.
-"""
-
-# Import the add_integer function
-from main_3 import add_integer
+# Test cases for the add_integer function
 
 # Test case 1: Adding two integers
-result = add_integer(5, 3)
-print(result)  # 8
+>>> add_integer(5, 3)
+8
 
 # Test case 2: Adding an integer and a float
-result = add_integer(10, 2.5)
-print(result)  # 12
+>>> add_integer(10, 2.5)
+12
 
 # Test case 3: Adding two floats
-result = add_integer(2.7, 3.3)
-print(result)  # 5
+>>> add_integer(2.7, 3.3)
+5
 
 # Test case 4: Adding a string and an integer (should raise TypeError)
-try:
-    add_integer("5", 3)
-except TypeError as e:
-    print(str(e))  # a must be an integer or b must be an integer
+>>> add_integer("5", 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
 # Test case 5: Adding a float and a string (should raise TypeError)
-try:
-    add_integer(5.5, "3")
-except TypeError as e:
-    print(str(e))  # a must be an integer or b must be an integer
+>>> add_integer(5.5, "3")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
